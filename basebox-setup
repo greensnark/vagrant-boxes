@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -e
+
+veewee vbox build --force CentOS-6.5-x86_64
+vagrant package --base CentOS-6.5-x86_64 --output snark-cent-6.5.box
+vagrant box add snark-cent-6.5 snark-cent-6.5.box
